@@ -8,6 +8,10 @@ export type Project = {
   video?: string;
   techStack: string[];
   features: string[];
+  problem: string;
+  solution: string;
+  role: string;
+  impact: string;
   githubUrl?: string;
   liveUrl?: string;
 };

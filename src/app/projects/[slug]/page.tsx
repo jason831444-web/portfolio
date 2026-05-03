@@ -80,6 +80,7 @@ export default async function ProjectDetailPage({
               <Link
                 href={project.liveUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:bg-zinc-100"
               >
                 Live Demo
@@ -89,16 +90,38 @@ export default async function ProjectDetailPage({
         </div>
 
         <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm">
-            <div className="relative aspect-video">
-                <Image
-                src={project.image}
-                alt={`${project.title} screenshot`}
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                priority
-                />
-            </div>
+          <div className="relative aspect-video">
+            <Image
+              src={project.image}
+              alt={`${project.title} screenshot`}
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-zinc-950">Problem</h2>
+          <p className="mt-4 leading-7 text-zinc-600">{project.problem}</p>
+        </div>
+
+        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-zinc-950">Solution</h2>
+          <p className="mt-4 leading-7 text-zinc-600">{project.solution}</p>
+        </div>
+
+        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-zinc-950">My Role</h2>
+          <p className="mt-4 leading-7 text-zinc-600">{project.role}</p>
+        </div>
+
+        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-zinc-950">Impact</h2>
+          <p className="mt-4 leading-7 text-zinc-600">{project.impact}</p>
         </div>
       </section>
 
