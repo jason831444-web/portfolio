@@ -69,9 +69,10 @@ export default async function ProjectDetailPage({
               <Link
                 href={project.githubUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-zinc-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
               >
-                GitHub
+                View GitHub
               </Link>
             )}
 

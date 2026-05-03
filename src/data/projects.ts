@@ -18,7 +18,7 @@ export const projects: Project[] = [
       "Application tracking dashboard",
       "AI-assisted recommendations",
     ],
-    githubUrl: "",
+    githubUrl: "https://github.com/jason831444-web/ApplyPilot",
     liveUrl: "",
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "AI-assisted field parsing",
       "Search, filtering, and export",
     ],
-    githubUrl: "",
+    githubUrl: "https://github.com/jason831444-web/DocuParse",
     liveUrl: "",
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "Congestion level classification",
       "Historical analytics dashboard",
     ],
-    githubUrl: "",
+    githubUrl: "https://github.com/jason831444-web/smart-place-analytics",
     liveUrl: "",
   },
 ];
