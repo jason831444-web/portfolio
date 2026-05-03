@@ -1,5 +1,15 @@
 import Link from "next/link";
 
+const techHighlights = [
+  "Next.js",
+  "TypeScript",
+  "FastAPI",
+  "PostgreSQL",
+  "Docker",
+  "AI",
+  "Computer Vision",
+];
+
 export default function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
@@ -19,6 +29,17 @@ export default function Hero() {
           tools, and computer vision systems with a focus on real user problems.
         </p>
 
+        <div className="mt-6 flex flex-wrap gap-2">
+          {techHighlights.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-700"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/projects"
@@ -28,10 +49,30 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/resume/jaeseong-yoon-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:bg-zinc-100"
           >
-            Contact Me
+            Resume
+          </Link>
+
+          <Link
+            href="https://github.com/jason831444-web"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:bg-zinc-100"
+          >
+            GitHub
+          </Link>
+
+          <Link
+            href="https://www.linkedin.com/in/jaeseong-yoon-1822553a9/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:bg-zinc-100"
+          >
+            LinkedIn
           </Link>
         </div>
       </div>
