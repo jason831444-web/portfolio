@@ -125,6 +125,61 @@ export default async function ProjectDetailPage({
         </div>
       </section>
 
+      <section className="mt-16 rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <div className="mb-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
+            System Design
+          </p>
+
+          <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-950">
+            Architecture
+          </h2>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          <div>
+            <h3 className="font-semibold text-zinc-950">Frontend</h3>
+            <p className="mt-2 leading-7 text-zinc-600">
+              {project.architecture.frontend}
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-zinc-950">Backend</h3>
+            <p className="mt-2 leading-7 text-zinc-600">
+              {project.architecture.backend}
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-zinc-950">Database</h3>
+            <p className="mt-2 leading-7 text-zinc-600">
+              {project.architecture.database}
+            </p>
+          </div>
+
+          {project.architecture.aiOrCv && (
+            <div>
+              <h3 className="font-semibold text-zinc-950">
+                AI / Computer Vision
+              </h3>
+              <p className="mt-2 leading-7 text-zinc-600">
+                {project.architecture.aiOrCv}
+              </p>
+            </div>
+          )}
+
+          {project.architecture.deployment && (
+            <div className="md:col-span-2">
+              <h3 className="font-semibold text-zinc-950">Deployment</h3>
+              <p className="mt-2 leading-7 text-zinc-600">
+                {project.architecture.deployment}
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+
       <section className="mt-16 grid gap-8 md:grid-cols-2">
         <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-zinc-950">Key Features</h2>

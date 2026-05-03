@@ -12,6 +12,13 @@ export type Project = {
   solution: string;
   role: string;
   impact: string;
+  architecture: {
+    frontend: string;
+    backend: string;
+    database: string;
+    aiOrCv?: string;
+    deployment?: string;
+  };
   githubUrl?: string;
   liveUrl?: string;
 };

@@ -32,6 +32,7 @@ export default function Home() {
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
             What I Build
           </p>
+
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-zinc-950">
             Practical systems with clear user value.
           </h2>
@@ -41,11 +42,12 @@ export default function Home() {
           {focusAreas.map((area) => (
             <div
               key={area.title}
-              className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm"
+              className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
               <h3 className="text-lg font-bold text-zinc-950">
                 {area.title}
               </h3>
+
               <p className="mt-3 leading-7 text-zinc-600">
                 {area.description}
               </p>
@@ -60,6 +62,7 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
               Featured Work
             </p>
+
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-zinc-950">
               Selected Projects
             </h2>

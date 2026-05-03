@@ -26,6 +26,18 @@ export const projects: Project[] = [
       "I designed and implemented the full-stack application structure, including the Next.js frontend, backend API flow, database-backed job tracking, and AI-assisted analysis features.",
     impact:
       "This project demonstrates my ability to build an end-to-end product that combines user workflow design, full-stack engineering, and AI-assisted decision support.",
+    architecture: {
+      frontend:
+        "Next.js and TypeScript frontend for job tracking, job detail views, analysis results, and application workflow management.",
+      backend:
+        "FastAPI backend that handles job records, reanalysis requests, resume-job matching workflows, and API communication.",
+      database:
+        "PostgreSQL database for storing job postings, application statuses, analysis results, and user workflow data.",
+      aiOrCv:
+        "AI-assisted analysis layer for extracting job requirements, evaluating resume fit, and generating application insights.",
+      deployment:
+        "Docker-based local development setup with a production-minded frontend/backend separation.",
+    },
     githubUrl: "https://github.com/jason831444-web/ApplyPilot",
     liveUrl: "",
   },
@@ -54,6 +66,18 @@ export const projects: Project[] = [
       "I built the full-stack document processing workflow, including upload handling, OCR integration, backend parsing logic, database storage, and the frontend document management interface.",
     impact:
       "This project shows my ability to design practical AI-assisted systems that turn messy real-world inputs into structured and usable information.",
+    architecture: {
+      frontend:
+        "Next.js frontend for document upload, dashboard views, document detail pages, filters, search, and export actions.",
+      backend:
+        "FastAPI backend that manages file uploads, OCR processing, parsing workflows, document APIs, and reprocessing logic.",
+      database:
+        "PostgreSQL database for storing document metadata, extracted fields, summaries, categories, and processing status.",
+      aiOrCv:
+        "OCR and AI-assisted parsing pipeline for extracting structured information from receipts, PDFs, and uploaded documents.",
+      deployment:
+        "Docker-based local development environment with separate frontend, backend, and database services.",
+    },
     githubUrl: "https://github.com/jason831444-web/DocuParse",
     liveUrl: "",
   },
@@ -82,6 +106,18 @@ export const projects: Project[] = [
       "I implemented the full-stack system architecture, including the FastAPI backend, PostgreSQL data model, Next.js dashboard, image upload flow, and computer vision analysis pipeline.",
     impact:
       "This project demonstrates my ability to combine computer vision, backend services, data persistence, and user-facing analytics into one practical system.",
+    architecture: {
+      frontend:
+        "Next.js dashboard for facility lists, facility detail pages, occupancy history, admin views, and analytics charts.",
+      backend:
+        "FastAPI backend that handles facility data, image uploads, occupancy analysis requests, and historical analytics APIs.",
+      database:
+        "PostgreSQL database for storing facilities, image analysis results, occupancy logs, and congestion history.",
+      aiOrCv:
+        "Computer vision pipeline using image-based occupancy analysis to estimate people count, available seats, and congestion levels.",
+      deployment:
+        "Docker-based full-stack setup with backend, frontend, and PostgreSQL services for local development.",
+    },
     githubUrl: "https://github.com/jason831444-web/smart-place-analytics",
     liveUrl: "",
   },
