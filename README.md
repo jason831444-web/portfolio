@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jaeseong Yoon Portfolio
+
+Personal software engineering portfolio built with Next.js, TypeScript, and Tailwind CSS.
+
+This site showcases my selected full-stack, AI-assisted, OCR, and computer vision projects. Each project page is designed to present the project overview, key features, tech stack, screenshots, demo videos, GitHub links, and live demo links.
+
+## Overview
+
+This portfolio is built as a project showcase for software engineering opportunities. The goal is to clearly present practical projects that solve real workflow problems and demonstrate production-minded engineering.
+
+Current featured projects include:
+
+- ApplyPilot — AI Job Search Operating System
+- DocuParse — AI Document and Receipt Parser
+- Smart Seat — Facility Congestion Analysis System
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Vercel
+
+## Features
+
+- Responsive portfolio homepage
+- Project listing page
+- Dynamic project detail pages
+- About page with background, skills, and experience
+- Contact page with email, LinkedIn, and GitHub links
+- Data-driven project structure using `src/data/projects.ts`
+- Placeholder sections for project images and demo videos
+
+## Project Structure
+
+```txt
+src/
+├── app/
+│   ├── page.tsx
+│   ├── layout.tsx
+│   ├── about/
+│   │   └── page.tsx
+│   ├── contact/
+│   │   └── page.tsx
+│   └── projects/
+│       ├── page.tsx
+│       └── [slug]/
+│           └── page.tsx
+├── components/
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── Navbar.tsx
+│   └── ProjectCard.tsx
+├── data/
+│   └── projects.ts
+└── types/
+    └── project.ts
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the local site:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development Notes
 
-## Learn More
+Project information is managed in:
 
-To learn more about Next.js, take a look at the following resources:
+```txt
+src/data/projects.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To add a new project, add a new object to the `projects` array with the following fields:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```ts
+{
+  slug: "project-slug",
+  title: "Project Title",
+  subtitle: "Short project category",
+  description: "Short card description",
+  longDescription: "Detailed project description",
+  image: "/images/project/thumbnail.png",
+  video: "/videos/project-demo.mp4",
+  techStack: ["Next.js", "TypeScript"],
+  features: ["Feature 1", "Feature 2"],
+  githubUrl: "",
+  liveUrl: "",
+}
+```
 
-## Deploy on Vercel
+Images and demo videos should be placed under the `public` directory:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```txt
+public/
+├── images/
+└── videos/
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Status
+
+This portfolio is currently under development. Project screenshots, demo videos, GitHub links, live demo links, and additional project details will be added as the site is completed.
+
+## Deployment
+
+This project is intended to be deployed on Vercel.
