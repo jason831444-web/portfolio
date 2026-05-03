@@ -11,17 +11,17 @@ const focusAreas = [
   {
     title: "AI-Assisted Tools",
     description:
-      "I design tools that use AI to turn unstructured inputs such as job postings, documents, and receipts into structured, useful information.",
+      "I design tools that use AI to turn unstructured inputs such as job postings, documents, receipts, and files into structured, useful information.",
   },
   {
-    title: "Computer Vision & OCR",
+    title: "Computer Vision & ML",
     description:
-      "I work on image-based systems for occupancy analysis, document understanding, OCR pipelines, and practical automation workflows.",
+      "I work on image-based systems, facility occupancy analysis, OCR pipelines, model comparison experiments, and practical automation workflows.",
   },
 ];
 
 export default function Home() {
-  const featuredProjects = projects.slice(0, 3);
+  const featuredProjects = projects;
 
   return (
     <div>
@@ -57,19 +57,22 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="mb-8 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
-              Featured Work
-            </p>
+        <div className="mb-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
+            Featured Work
+          </p>
 
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-zinc-950">
-              Selected Projects
-            </h2>
-          </div>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-zinc-950">
+            Selected Projects
+          </h2>
+
+          <p className="mt-3 max-w-2xl leading-7 text-zinc-600">
+            A collection of full-stack, AI-assisted, computer vision, academic
+            planning, and machine learning projects aligned with my resume.
+          </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
