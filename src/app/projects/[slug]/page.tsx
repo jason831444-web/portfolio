@@ -91,14 +91,22 @@ export default async function ProjectDetailPage({
 
         <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm">
           <div className="relative aspect-video">
-            <Image
-              src={project.image}
-              alt={`${project.title} screenshot`}
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              priority
-            />
+            {project.image ? (
+              <Image
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                priority
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center bg-zinc-100">
+                <span className="text-sm font-medium text-zinc-400">
+                  Image coming soon
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </section>
