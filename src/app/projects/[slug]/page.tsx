@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
@@ -86,10 +87,17 @@ export default async function ProjectDetailPage({
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100">
-          <div className="flex aspect-video items-center justify-center text-sm font-medium text-zinc-500">
-            Project Demo / Image
-          </div>
+        <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm">
+            <div className="relative aspect-video">
+                <Image
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                priority
+                />
+            </div>
         </div>
       </section>
 

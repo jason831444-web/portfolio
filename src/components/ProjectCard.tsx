@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/types/project";
 
@@ -11,8 +12,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       href={`/projects/${project.slug}`}
       className="group block overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
     >
-      <div className="flex aspect-video items-center justify-center bg-zinc-100 text-sm font-medium text-zinc-500">
-        Project Image
+      <div className="relative aspect-video bg-zinc-100">
+        <Image
+          src={project.image}
+          alt={`${project.title} thumbnail`}
+          fill
+          className="object-cover transition duration-300 group-hover:scale-105"
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+        />
       </div>
 
       <div className="space-y-3 p-5">
