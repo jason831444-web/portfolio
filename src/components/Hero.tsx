@@ -6,7 +6,8 @@ const techHighlights = [
   "FastAPI",
   "PostgreSQL",
   "Docker",
-  "AI",
+  "MQTT",
+  "OCR",
   "Computer Vision",
 ];
 
@@ -25,8 +26,9 @@ export default function Hero() {
 
         <p className="mt-6 text-lg leading-8 text-zinc-600">
           I am Jaeseong Yoon, a Computer Science student at Stony Brook
-          University. I build production-minded web applications, AI-powered
-          tools, and computer vision systems with a focus on real user problems.
+          University. I build product-minded web applications with Next.js,
+          FastAPI, PostgreSQL, Docker, and AI/CV/OCR integrations for real user
+          workflows.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2">

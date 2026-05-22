@@ -6,17 +6,17 @@ const focusAreas = [
   {
     title: "Full-Stack Systems",
     description:
-      "I build complete web applications with modern frontend interfaces, backend APIs, database-backed workflows, and deployment-ready architecture.",
+      "I build web applications with modern frontend interfaces, backend APIs, database-backed workflows, testing, and Dockerized local infrastructure.",
   },
   {
-    title: "AI-Assisted Tools",
+    title: "Operational Workflows",
     description:
-      "I design tools that use AI to turn unstructured inputs such as job postings, documents, receipts, and files into structured, useful information.",
+      "I work on dashboards and decision-support flows for telemetry-style data, job-fit analysis, document review, and other practical user workflows.",
   },
   {
-    title: "Computer Vision & ML",
+    title: "AI / CV / OCR Integrations",
     description:
-      "I work on image-based systems, facility occupancy analysis, OCR pipelines, model comparison experiments, and practical automation workflows.",
+      "I integrate OCR, optional local LLM inference, and mock/YOLO computer-vision paths into software products without overstating automation.",
   },
 ];
 
@@ -67,8 +67,9 @@ export default function Home() {
           </h2>
 
           <p className="mt-3 max-w-2xl leading-7 text-zinc-600">
-            A collection of full-stack, AI-assisted, computer vision, academic
-            planning, and machine learning projects aligned with my resume.
+            A concise set of practical full-stack systems covering facility
+            analytics, job-fit decision support, document/OCR workflows, and
+            team-built academic planning software.
           </p>
         </div>
 

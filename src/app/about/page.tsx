@@ -1,22 +1,25 @@
 export const metadata = {
   title: "About | Jaeseong Yoon",
   description:
-    "About Jaeseong Yoon, a Computer Science student and software engineer focused on full-stack systems, AI tools, OCR, and computer vision.",
+    "About Jaeseong Yoon, a Computer Science student focused on product-minded full-stack systems with AI, OCR, and computer vision integrations.",
 };
 
 const skills = [
-  "JavaScript",
-  "TypeScript",
-  "React",
   "Next.js",
-  "Python",
+  "React",
+  "TypeScript",
   "FastAPI",
+  "Python",
   "PostgreSQL",
+  "SQLAlchemy",
   "Docker",
-  "Tailwind CSS",
-  "Computer Vision",
-  "OCR",
-  "Machine Learning",
+  "MQTT",
+  "Recharts",
+  "OpenCV",
+  "YOLO/Ultralytics",
+  "Tesseract OCR",
+  "PyMuPDF",
+  "pytest",
 ];
 
 const experiences = [
@@ -59,9 +62,9 @@ export default function AboutPage() {
         <p className="mt-6 text-lg leading-8 text-zinc-600">
           I am Jaeseong Yoon, a Computer Science student at Stony Brook
           University. My work focuses on full-stack applications, AI-assisted
-          tools, OCR pipelines, and computer vision systems. I enjoy building
-          projects that solve concrete workflow problems and can be explained
-          clearly through real demos.
+          document workflows, telemetry-style dashboards, and computer vision
+          integrations. I enjoy building projects that solve concrete workflow
+          problems and can be explained clearly through working code.
         </p>
       </section>
 
@@ -92,14 +95,14 @@ export default function AboutPage() {
             </p>
 
             <p>
-              AI-assisted systems that turn messy inputs such as job postings,
-              documents, receipts, and images into structured, useful
-              information.
+              Practical systems that turn messy inputs such as telemetry-style
+              signals, job postings, documents, and images into useful
+              dashboards, records, and decisions.
             </p>
 
             <p>
-              Portfolio-ready engineering projects with clean interfaces,
-              realistic system design, and clear demo flows.
+              Portfolio projects grounded in FastAPI, Next.js, PostgreSQL,
+              Docker, tests, and honest AI/CV/OCR integration boundaries.
             </p>
           </div>
         </div>

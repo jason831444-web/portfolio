@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { hasProjectImage } from "@/lib/project-media";
 import type { Project } from "@/types/project";
 
 type ProjectCardProps = {
@@ -7,13 +8,15 @@ type ProjectCardProps = {
 };
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const showImage = hasProjectImage(project);
+
   return (
     <Link
       href={`/projects/${project.slug}`}
       className="group block overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
     >
-      <div className="relative aspect-video bg-zinc-100">
-        {project.image ? (
+      {showImage && (
+        <div className="relative aspect-video bg-zinc-100">
           <Image
             src={project.image}
             alt={`${project.title} thumbnail`}
@@ -21,19 +24,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="object-cover transition duration-300 group-hover:scale-105"
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-zinc-100 px-6 text-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
-                Project Preview
-              </p>
-              <p className="mt-2 text-lg font-bold text-zinc-700">
-                {project.title}
-              </p>
-            </div>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="space-y-3 p-5">
         <div>

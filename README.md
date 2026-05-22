@@ -2,17 +2,18 @@
 
 Personal software engineering portfolio built with Next.js, TypeScript, and Tailwind CSS.
 
-This site showcases my selected full-stack, AI-assisted, OCR, and computer vision projects. Each project page is designed to present the project overview, key features, tech stack, screenshots, demo videos, GitHub links, and live demo links.
+This site showcases selected full-stack software projects with AI/CV/OCR integrations, including facility analytics, job-fit decision support, document processing, and academic planning work.
 
 ## Overview
 
-This portfolio is built as a project showcase for software engineering opportunities. The goal is to clearly present practical projects that solve real workflow problems and demonstrate production-minded engineering.
+This portfolio is built as a project showcase for software engineering opportunities. The goal is to clearly present practical projects that solve real workflow problems through frontend interfaces, backend APIs, database-backed workflows, tests, and Dockerized local infrastructure.
 
 Current featured projects include:
 
-- ApplyPilot — AI Job Search Operating System
-- DocuParse — AI Document and Receipt Parser
-- Smart Seat — Facility Congestion Analysis System
+- Smart Place Analytics — Facility Operations Analytics Platform
+- ApplyPilot — Deterministic Job-Fit Decision Support
+- DocuParse — AI-Assisted Document Workflow
+- SAM Academic Management System — Team Academic Planning Platform
 
 ## Tech Stack
 
@@ -30,7 +31,7 @@ Current featured projects include:
 - About page with background, skills, and experience
 - Contact page with email, LinkedIn, and GitHub links
 - Data-driven project structure using `src/data/projects.ts`
-- Placeholder sections for project images and demo videos
+- Conditional project image rendering that hides missing image areas cleanly
 
 ## Project Structure
 
@@ -96,7 +97,6 @@ To add a new project, add a new object to the `projects` array with the followin
   description: "Short card description",
   longDescription: "Detailed project description",
   image: "/images/project/thumbnail.png",
-  video: "/videos/project-demo.mp4",
   techStack: ["Next.js", "TypeScript"],
   features: ["Feature 1", "Feature 2"],
   githubUrl: "",
@@ -104,17 +104,16 @@ To add a new project, add a new object to the `projects` array with the followin
 }
 ```
 
-Images and demo videos should be placed under the `public` directory:
+Images should be placed under the `public` directory:
 
 ```txt
 public/
-├── images/
-└── videos/
+└── images/
 ```
 
 ## Status
 
-This portfolio is currently under development. Project screenshots, demo videos, GitHub links, live demo links, and additional project details will be added as the site is completed.
+This portfolio is maintained as a concise project showcase. Project pages use existing image assets when available and hide media areas when no valid image is configured.
 
 ## Deployment
 

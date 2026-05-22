@@ -5,7 +5,6 @@ export type Project = {
   description: string;
   longDescription: string;
   image?: string;
-  video?: string;
   categories: string[];
   techStack: string[];
   features: string[];

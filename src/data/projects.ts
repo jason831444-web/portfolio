@@ -2,100 +2,55 @@ import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
-    slug: "docuparse",
-    title: "DocuParse",
-    subtitle: "AI-Powered Document Understanding System",
+    slug: "smart-place-analytics",
+    title: "Smart Place Analytics",
+    subtitle: "Facility Operations Analytics Platform",
     description:
-      "A full-stack document understanding system for images, PDFs, spreadsheets, and text files with extraction, classification, review, and search workflows.",
+      "Full-stack facility analytics platform for occupancy, telemetry-style data, dashboards, congestion alerts, recommendations, and operator decision workflows.",
     longDescription:
-      "DocuParse is a full-stack document understanding platform that processes images, PDFs, spreadsheets, and text files through OCR, heuristic parsing, and local AI inference. It supports document extraction, classification, review workflows, search, category management, and bulk document actions in a Dockerized environment.",
-    image: "/images/docuparse/thumbnail.png",
-    video: "/videos/docuparse-demo.mp4",
-    categories: ["Full-Stack", "OCR", "AI", "Document Processing"],
-    techStack: [
-      "FastAPI",
-      "Next.js",
-      "PostgreSQL",
-      "Docker",
-      "OCR",
-      "llama.cpp",
-      "GGUF",
-    ],
-    features: [
-      "Multi-format document upload and processing",
-      "OCR and heuristic parsing pipeline",
-      "Local GGUF-based AI inference",
-      "Document classification, review, and search workflows",
-      "Notifications, category management, and bulk actions",
-    ],
-    problem:
-      "Documents such as receipts, PDFs, spreadsheets, and text files often contain useful information, but that information is difficult to search, classify, review, or export when it remains trapped in unstructured files.",
-    solution:
-      "DocuParse combines OCR, heuristic parsing, and local GGUF-based AI inference to extract structured fields, classify documents, summarize content, and organize files into searchable and reviewable workflows.",
-    role:
-      "I engineered the full-stack document understanding workflow, including upload handling, OCR integration, parsing logic, local AI inference routing, database persistence, search/category features, and frontend review workflows.",
-    impact:
-      "This project demonstrates my ability to build a practical AI-assisted system that handles messy real-world documents, improves extraction reliability, and turns unstructured files into usable product data.",
-    architecture: {
-      frontend:
-        "Next.js frontend for document upload, dashboard views, document detail pages, review workflows, category management, search, filters, notifications, and bulk actions.",
-      backend:
-        "FastAPI backend that manages file uploads, OCR processing, heuristic parsing, local AI inference routing, document APIs, reprocessing, and workflow actions.",
-      database:
-        "PostgreSQL database for storing document metadata, extracted fields, summaries, categories, processing status, review state, and search-related information.",
-      aiOrCv:
-        "OCR and local GGUF-based AI inference pipeline using fallback routing across multiple document formats to improve extraction and classification reliability.",
-      deployment:
-        "Dockerized full-stack environment with separate frontend, backend, and database services for reproducible local development.",
-    },
-    githubUrl: "https://github.com/jason831444-web/DocuParse",
-    liveUrl: "",
-  },
-  {
-    slug: "smart-seat",
-    title: "Smart Seat",
-    subtitle: "Facility Congestion Analysis System",
-    description:
-      "A full-stack facility congestion analysis platform that estimates people count, occupied seats, available seats, and congestion levels from facility images and live frames.",
-    longDescription:
-      "Smart Seat is a facility congestion analysis system that supports image upload analysis, live frame-based monitoring, historical occupancy tracking, and admin management workflows. It uses computer vision to estimate people count, occupied seats, available seats, and congestion levels, then presents current and historical usage data through dashboards.",
+      "Smart Place Analytics is a portfolio MVP for facility operations workflows. It combines a Next.js dashboard, FastAPI backend, PostgreSQL persistence, telemetry-style sensor data, operational alerts, recommendations, decision audits, and a configurable mock/YOLO detector layer.",
     image: "/images/smart-seat/thumbnail.png",
-    video: "/videos/smart-seat-demo.mp4",
-    categories: ["Full-Stack", "Computer Vision", "Analytics"],
+    categories: ["Full-Stack", "Operations Analytics", "Computer Vision"],
     techStack: [
       "Next.js",
+      "TypeScript",
       "FastAPI",
+      "Python",
       "PostgreSQL",
+      "SQLAlchemy",
+      "Alembic",
       "Docker",
-      "YOLO",
-      "Computer Vision",
+      "MQTT",
+      "Mosquitto",
+      "Recharts",
+      "YOLO/Ultralytics",
     ],
     features: [
-      "Image upload and facility congestion analysis",
-      "YOLO-based person detection",
-      "Occupied seat and available seat estimation",
-      "Live frame-based monitoring workflow",
-      "Historical occupancy tracking and analytics dashboards",
+      "Facility dashboards for occupancy history, telemetry, alerts, recommendations, and operator decisions",
+      "FastAPI services and PostgreSQL models for facilities, uploads, occupancy logs, sensor logs, rollups, alerts, job runs, and decision audits",
+      "Browser-frame and upload-based monitoring workflows with mock/YOLO detector backends",
+      "Synthetic sensor streams, background operation jobs, and optional MQTT ingestion through Mosquitto",
+      "Backend tests for congestion logic, live analysis, MQTT parsing, CV evaluation, recommendations, and decision audits",
     ],
     problem:
-      "Students and facility users often do not know how crowded a study space or facility is until they physically arrive, which can waste time and reduce facility usage efficiency.",
+      "Shared spaces and facilities generate operational signals from occupancy, telemetry, alerts, and operator decisions, but those signals are often disconnected from the dashboards and workflows people use to act on them.",
     solution:
-      "Smart Seat analyzes facility images and live frames to estimate people count, occupied seats, available seats, and congestion levels, then displays real-time and historical usage data through a dashboard.",
+      "The project brings occupancy estimates, telemetry-style data, alerts, recommendations, and decision history into one full-stack dashboard backed by FastAPI, PostgreSQL, and Dockerized local infrastructure.",
     role:
-      "I built the full-stack system architecture, including the Next.js dashboard, FastAPI backend, PostgreSQL persistence layer, image upload workflow, YOLO-based analysis pipeline, and analytics views.",
+      "I built the full-stack system architecture, including the Next.js dashboard, FastAPI APIs, PostgreSQL models and migrations, detector abstraction, MQTT demo path, background jobs, and backend regression tests.",
     impact:
-      "This project demonstrates my ability to combine computer vision, backend services, persistent analytics, and user-facing dashboards into a practical facility monitoring system.",
+      "This project demonstrates practical full-stack engineering around operational analytics, telemetry ingestion, dashboard design, database-backed workflows, and honest CV evaluation boundaries.",
     architecture: {
       frontend:
-        "Next.js dashboard for facility lists, facility detail pages, occupancy history, admin views, live monitoring screens, and analytics charts.",
+        "Next.js and TypeScript frontend for facility dashboards, upload analysis, live monitoring, admin workflows, Recharts visualizations, recommendations, and decision history.",
       backend:
-        "FastAPI backend that handles facility data, image uploads, occupancy analysis requests, live frame analysis, and historical analytics APIs.",
+        "FastAPI backend with services for facility data, uploads, live frame analysis, telemetry ingestion, alerts, rollups, recommendations, decision audits, and background operations jobs.",
       database:
-        "PostgreSQL database for storing facilities, image analysis results, occupancy logs, congestion history, peak-hour summaries, and recent activity data.",
+        "PostgreSQL database managed with SQLAlchemy and Alembic for facilities, uploads, analyses, occupancy logs, sensor logs, rollups, alerts, job runs, users, and decision audits.",
       aiOrCv:
-        "YOLO-based computer vision pipeline for person detection, occupancy estimation, available seat calculation, and congestion level classification.",
+        "Configurable detector layer with deterministic mock mode for tests and optional YOLO/Ultralytics person detection for local experimentation.",
       deployment:
-        "Docker-based full-stack setup with backend, frontend, and PostgreSQL services for local development.",
+        "Docker Compose local stack with PostgreSQL, FastAPI, Next.js, optional sensor simulator, optional operations jobs, and optional Mosquitto MQTT profile.",
     },
     githubUrl: "https://github.com/jason831444-web/smart-place-analytics",
     liveUrl: "",
@@ -103,125 +58,155 @@ export const projects: Project[] = [
   {
     slug: "applypilot",
     title: "ApplyPilot",
-    subtitle: "Rule-Based Job-Fit Evaluation Platform",
+    subtitle: "Deterministic Job-Fit Decision Support",
     description:
-      "A full-stack job application platform that evaluates job postings against a candidate profile using structured rules for new-grad fit, skills, location, and work authorization risk.",
+      "Full-stack job-fit analysis and application tracker with authenticated profiles, deterministic scoring, saved analyses, and explainable recommendations.",
     longDescription:
-      "ApplyPilot is a rule-based job-fit evaluation platform that helps candidates evaluate saved job postings against a structured profile. It supports job saving, job-detail analysis, profile-based scoring, recommendation labels, missing-skill detection, seniority warnings, sponsorship-risk flags, and application status tracking in a unified dashboard.",
+      "ApplyPilot helps new-grad candidates evaluate job postings against a structured profile. It uses deterministic parsing and scoring rather than a black-box model, then stores recommendations, missing skills, work-authorization risk, evidence, and application status in a PostgreSQL-backed workflow.",
     image: "/images/applypilot/thumbnail.png",
-    video: "/videos/applypilot-demo.mp4",
-    categories: ["Full-Stack", "Job Search", "Rule-Based Analysis"],
-    techStack: ["Next.js", "FastAPI", "PostgreSQL", "Docker"],
+    categories: ["Full-Stack", "Decision Support", "Job Search"],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Alembic",
+      "Docker",
+      "JWT Auth",
+      "pytest",
+    ],
     features: [
-      "Job saving and application status tracking",
-      "Profile-based job-fit scoring",
-      "Recommendation labels and missing-skill detection",
-      "Seniority and work authorization risk flags",
-      "Repeatable job-detail analysis workflow",
+      "Authenticated profiles, saved job analyses, application tracking, and dashboard analytics",
+      "Deterministic Python engine for skill extraction, seniority signals, work-authorization risk, confidence warnings, and evidence snippets",
+      "Profile-change reanalysis workflow to keep saved recommendations and dashboard data consistent",
+      "FastAPI service/repository layers with SQLAlchemy models, Alembic migrations, and user-scoped queries",
+      "Regression tests for parser edge cases, ownership boundaries, protected workflows, and persisted analysis behavior",
     ],
     problem:
-      "Job seekers often save postings across different platforms without a consistent way to evaluate fit, track application status, or identify risks such as senior-level requirements, weak skill alignment, or unclear sponsorship support.",
+      "New-grad candidates often save many job postings without a consistent way to evaluate fit, identify risk signals, track application state, or understand which skills are missing.",
     solution:
-      "ApplyPilot evaluates job postings against a candidate profile using structured rules for new-grad fit, skills, location, and work authorization risk, then organizes results into a trackable application workflow.",
+      "ApplyPilot turns messy job descriptions and candidate profile data into structured scores, evidence-backed recommendations, missing-skill feedback, resume-tailoring suggestions, and application tracking workflows.",
     role:
-      "I implemented the full-stack platform, including the Next.js frontend, FastAPI backend, PostgreSQL data model, job tracking workflow, saved application views, candidate profile logic, and rule-based evaluation system.",
+      "I implemented the full-stack platform, including the Next.js UI, FastAPI backend, SQLAlchemy models, deterministic analysis provider, JWT authentication, CSV export, and PostgreSQL-backed tests.",
     impact:
-      "This project demonstrates my ability to build a practical workflow tool that combines full-stack engineering with structured decision logic for a real job-search use case.",
+      "This project shows backend-heavy full-stack work with explainable decision logic, durable analysis persistence, authentication, testing, and practical user workflows.",
     architecture: {
       frontend:
-        "Next.js frontend for job tracking, saved applications, job detail pages, candidate profile management, recommendation labels, and analysis results.",
+        "Next.js frontend for profile management, resume import, job analysis, applications, dashboard analytics, recommendations, and resume-tailoring views.",
       backend:
-        "FastAPI backend that handles job records, profile data, scoring workflows, saved applications, repeated analysis requests, and API communication.",
+        "FastAPI backend organized into route, service, repository, schema, model, auth, and deterministic analysis layers.",
       database:
-        "PostgreSQL database for storing job postings, candidate profiles, saved applications, application statuses, scoring results, and analysis metadata.",
+        "PostgreSQL database managed with SQLAlchemy and Alembic for users, profiles, jobs, applications, and stored job analyses.",
       aiOrCv:
-        "Rule-based evaluation layer for new-grad fit, skills alignment, location fit, seniority warnings, sponsorship risk, and recommendation labels.",
+        "Rule-based analysis layer that extracts job signals and produces explainable recommendations without relying on an LLM for core scoring.",
       deployment:
-        "Docker-based local development setup with separate frontend, backend, and database services.",
+        "Docker Compose local stack with deployed frontend/backend links documented in the project README.",
     },
     githubUrl: "https://github.com/jason831444-web/ApplyPilot",
+    liveUrl: "https://apply-pilot-tau.vercel.app/dashboard",
+  },
+  {
+    slug: "docuparse",
+    title: "DocuParse",
+    subtitle: "AI-Assisted Document Workflow",
+    description:
+      "Document processing workspace that turns PDFs, images, spreadsheets, Office files, and text into searchable, reviewable records with OCR and deterministic parsing.",
+    longDescription:
+      "DocuParse is a local-first document workflow workspace. It validates uploads, extracts text from PDFs/images/Office files/spreadsheets/text, applies deterministic parsing and category interpretation, stores reviewable records in PostgreSQL, and can optionally use local GGUF inference through llama.cpp.",
+    image: "/images/docuparse/thumbnail.png",
+    categories: ["Full-Stack", "OCR", "Document Processing"],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Docker",
+      "Tesseract OCR",
+      "PyMuPDF",
+      "llama.cpp/GGUF",
+    ],
+    features: [
+      "Multi-format upload handling for PDFs, images, Office files, spreadsheets, structured text, and markup files",
+      "Upload validation, OCR/text extraction, file-type routing, deterministic parsing, and category interpretation",
+      "Reviewable extraction outputs with editable fields, category folders, search/filtering, notifications, and bulk actions",
+      "CSV and per-document JSON export workflows",
+      "Focused backend tests for upload safety and category normalization behavior",
+    ],
+    problem:
+      "Personal and small-team document collections often mix PDFs, images, spreadsheets, receipts, notes, and Office files, making useful details hard to search, categorize, review, or export.",
+    solution:
+      "DocuParse converts heterogeneous files into searchable records with OCR/text extraction, deterministic parsing, category interpretation, quality checks, and review-focused UI flows.",
+    role:
+      "I built the full-stack ingestion and review workflow, including FastAPI document APIs, extraction services, PostgreSQL persistence, category/search behavior, export paths, and the Next.js review interface.",
+    impact:
+      "This project demonstrates practical AI/OCR integration as a software workflow: outputs are visible, editable, searchable, and reviewable rather than treated as perfect automation.",
+    architecture: {
+      frontend:
+        "Next.js frontend for upload, dashboard, document library, category folders, document detail editing, review queues, notifications, and bulk actions.",
+      backend:
+        "FastAPI backend for upload validation, storage safety, file ingestion, OCR/text extraction, parsing, category interpretation, quality evaluation, CRUD, reprocessing, and export APIs.",
+      database:
+        "PostgreSQL database managed with SQLAlchemy and Alembic for document metadata, extracted content, categories, processing state, review state, and workflow fields.",
+      aiOrCv:
+        "Tesseract/PyMuPDF/Office extraction pipeline with deterministic parsing and optional local llama.cpp/GGUF interpretation for reviewable document understanding.",
+      deployment:
+        "Docker Compose local stack with PostgreSQL, FastAPI, Next.js, and optional mounted local model directory.",
+    },
+    githubUrl: "https://github.com/jason831444-web/docuparse",
     liveUrl: "",
   },
   {
     slug: "sam-system",
-    title: "Student Academic Management System",
-    subtitle: "Academic Planning and Course Management Platform",
+    title: "SAM Academic Management System",
+    subtitle: "Team Academic Planning Platform",
     description:
-      "A student academic management website designed to improve course exploration, degree requirement planning, and academic scheduling workflows.",
+      "Academic planning and student administration system built with Spring Boot, React/Vite, JPA/MySQL, Google OAuth, and role-based workflows.",
     longDescription:
-      "The Student Academic Management System is a full-stack academic planning platform designed to improve and extend key functions of Stony Brook University’s SOLAR platform. It helps students explore course information, understand degree requirements, and plan academic schedules through a more intuitive interface.",
-    // image: "/images/sam-system/thumbnail.png",
-    categories: ["Full-Stack", "Academic Planning", "Team Project"],
-    techStack: ["Spring Boot", "MySQL", "React", "GitHub Actions"],
+      "SAM is a team-built academic management platform for course exploration, degree planning, registration workflows, role-based dashboards, and student administration. The project uses a Spring Boot backend, React/Vite frontend, JPA/MySQL persistence, Google OAuth, and automated test tooling.",
+    image: "/images/sam-system/thumbnail.png",
+    categories: ["Full-Stack", "Team Project", "Academic Planning"],
+    techStack: [
+      "Spring Boot",
+      "Java",
+      "React",
+      "TypeScript",
+      "Vite",
+      "JPA",
+      "MySQL",
+      "Google OAuth",
+      "JUnit",
+      "Playwright",
+    ],
     features: [
-      "Course information exploration",
-      "Degree requirement planning support",
-      "Academic scheduling assistance",
-      "Course selection algorithm",
-      "Automated testing workflow with GitHub Actions",
+      "Role-based academic workflows for students, instructors, advisors, and registrars",
+      "Course registration, schedule planning, degree requirements, and override workflows",
+      "Spring Boot controllers, services, repositories, and JPA entities",
+      "React/Vite frontend pages for academic planning and administration workflows",
+      "Testing setup with JUnit, frontend tests, and Playwright API tests",
     ],
     problem:
-      "University academic planning systems can be difficult to navigate, making it harder for students to understand course options, degree requirements, and scheduling decisions in one place.",
+      "Academic planning tools can make it difficult for students and staff to connect course selection, registration rules, degree requirements, schedules, and role-specific workflows.",
     solution:
-      "The SAM system provides a more intuitive academic management interface for course exploration, degree planning, and schedule support, while using backend logic to assist with course selection based on student needs.",
+      "SAM organizes academic administration into a full-stack application with role-based interfaces, backend APIs, persistence models, planning logic, and testing support.",
     role:
-      "I contributed to the full-stack development workflow, including frontend academic planning features, backend-supported course selection logic, and team collaboration using GitHub Actions.",
+      "I contributed to the team full-stack development workflow across academic planning features, backend-supported course selection logic, and shared GitHub-based collaboration.",
     impact:
-      "This project demonstrates my ability to work in a team environment, build academic workflow software, and connect frontend usability with backend planning logic.",
+      "This project adds Java/Spring and team software engineering evidence while staying secondary to my main full-stack Python/TypeScript portfolio projects.",
     architecture: {
       frontend:
-        "React frontend for course exploration, academic planning screens, degree requirement views, and student-facing workflows.",
+        "React/Vite frontend for dashboards, course registration, course search, degree audit, planner, profile, roster, and administration pages.",
       backend:
-        "Spring Boot backend for academic data APIs, course planning logic, and system workflows.",
+        "Spring Boot backend with controllers, services, repositories, security configuration, OAuth flow, PDF/YAML parsing, planning, and registration logic.",
       database:
-        "MySQL database for storing academic records, course data, requirements, and planning-related information.",
-      aiOrCv:
-        "Course selection and academic scheduling logic designed to support planning decisions based on degree requirements and student needs.",
+        "JPA/MySQL persistence model for users, courses, classes, degree requirements, registrations, waivers, holds, schedules, and planning records.",
       deployment:
-        "Team development workflow supported by GitHub Actions for automated testing and shared development practices.",
+        "Team project with Maven, frontend test tooling, Playwright API tests, and GitHub-hosted source.",
     },
-    githubUrl: "",
-    liveUrl: "",
-  },
-  {
-    slug: "cnn-vs-snn",
-    title: "CNN vs. SNN Image Classification Comparison",
-    subtitle: "Machine Learning and Neuromorphic Computing Experiment",
-    description:
-      "An image classification experiment comparing ResNet-152 and a custom 3-layer Spiking Neural Network using Python, NumPy, PyTorch, and Matplotlib.",
-    longDescription:
-      "This project compares conventional deep learning and spiking neural network approaches for image classification. It evaluates ResNet-152 against a custom 3-layer Spiking Neural Network, analyzing accuracy, loss, computational behavior, and trade-offs between CNN and neuromorphic-style architectures.",
-    // image: "/images/cnn-vs-snn/thumbnail.png",
-    categories: ["Machine Learning", "Computer Vision", "SNN"],
-    techStack: ["Python", "NumPy", "PyTorch", "Matplotlib"],
-    features: [
-      "ResNet-152 image classification experiment",
-      "Custom 3-layer Spiking Neural Network implementation",
-      "Accuracy and loss evaluation",
-      "Model behavior comparison",
-      "Matplotlib result visualization",
-    ],
-    problem:
-      "Conventional CNNs and spiking neural networks have different computational characteristics, but it can be difficult to understand their trade-offs without running controlled image classification experiments.",
-    solution:
-      "This project compares ResNet-152 with a custom 3-layer SNN, evaluates performance metrics, and visualizes experimental results to understand trade-offs between conventional and spiking neural architectures.",
-    role:
-      "I conducted the experiments, implemented the SNN comparison workflow, evaluated accuracy and loss, visualized results, and summarized comparative model behavior.",
-    impact:
-      "This project demonstrates my interest in machine learning, computer vision, and neuromorphic computing, while showing my ability to evaluate model performance experimentally.",
-    architecture: {
-      frontend:
-        "Experiment results were visualized using Matplotlib charts and summary outputs rather than a web frontend.",
-      backend:
-        "Python-based experimental scripts for training, evaluation, metric tracking, and comparison logic.",
-      database:
-        "Dataset-driven experiment workflow using image classification data and saved result outputs rather than a production database.",
-      aiOrCv:
-        "ResNet-152 CNN comparison against a custom 3-layer Spiking Neural Network using PyTorch and NumPy.",
-      deployment:
-        "Local research and experimentation workflow focused on reproducible model evaluation and visualization.",
-    },
-    githubUrl: "",
+    githubUrl: "https://github.com/SihoonSung/SBU_25F_CSE416",
     liveUrl: "",
   },
 ];

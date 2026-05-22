@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jaeseong Yoon | Portfolio",
   description:
-    "Software engineering portfolio featuring full-stack, AI, OCR, and computer vision projects.",
+    "Software engineering portfolio featuring product-minded full-stack systems with AI, OCR, and computer vision integrations.",
 };
 
 export default function RootLayout({

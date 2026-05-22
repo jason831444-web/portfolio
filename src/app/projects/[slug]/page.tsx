@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
+import { hasProjectImage } from "@/lib/project-media";
 
 type ProjectDetailPageProps = {
   params: Promise<{
@@ -41,6 +42,8 @@ export default async function ProjectDetailPage({
     notFound();
   }
 
+  const showImage = hasProjectImage(project);
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
       <Link
@@ -50,7 +53,13 @@ export default async function ProjectDetailPage({
         ← Back to Projects
       </Link>
 
-      <section className="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+      <section
+        className={
+          showImage
+            ? "mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start"
+            : "mt-10 max-w-4xl"
+        }
+      >
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
             {project.subtitle}
@@ -89,9 +98,9 @@ export default async function ProjectDetailPage({
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm">
-          <div className="relative aspect-video">
-            {project.image ? (
+        {showImage && (
+          <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm">
+            <div className="relative aspect-video">
               <Image
                 src={project.image}
                 alt={`${project.title} screenshot`}
@@ -100,15 +109,9 @@ export default async function ProjectDetailPage({
                 sizes="(min-width: 1024px) 45vw, 100vw"
                 priority
               />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center bg-zinc-100">
-                <span className="text-sm font-medium text-zinc-400">
-                  Image coming soon
-                </span>
-              </div>
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </section>
 
       <section className="mt-16 grid gap-6 md:grid-cols-2">
@@ -217,24 +220,6 @@ export default async function ProjectDetailPage({
           </div>
         </div>
       </section>
-
-      {project.video && (
-        <section className="mt-16">
-          <div className="mb-5">
-            <h2 className="text-2xl font-bold text-zinc-950">Demo Video</h2>
-            <p className="mt-2 text-zinc-600">
-              A walkthrough video will be added here once the project demo is
-              recorded.
-            </p>
-          </div>
-
-          <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100">
-            <div className="flex aspect-video items-center justify-center text-sm font-medium text-zinc-500">
-              Demo Video Placeholder
-            </div>
-          </div>
-        </section>
-      )}
     </div>
   );
 }

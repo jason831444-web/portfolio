@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 export const metadata = {
   title: "Projects | Jaeseong Yoon",
   description:
-    "Selected software engineering projects by Jaeseong Yoon, including full-stack, AI, OCR, and computer vision systems.",
+    "Selected full-stack software projects by Jaeseong Yoon, including facility analytics, job-fit analysis, document/OCR workflows, and academic planning.",
 };
 
 export default function ProjectsPage() {
@@ -20,9 +20,9 @@ export default function ProjectsPage() {
         </h1>
 
         <p className="mt-5 text-lg leading-8 text-zinc-600">
-          A collection of full-stack, AI-assisted, OCR, and computer vision
-          projects focused on practical workflows, clean interfaces, and
-          production-minded system design.
+          Practical full-stack systems with backend APIs, database-backed
+          workflows, dashboards, tests, Docker setup, and carefully scoped
+          AI/CV/OCR integrations.
         </p>
       </div>
 
