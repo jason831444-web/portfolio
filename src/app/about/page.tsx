@@ -18,7 +18,6 @@ const skillGroups = [
       "Pydantic",
       "REST APIs",
       "Node.js",
-      "Express.js",
       "Spring Boot",
     ],
   },

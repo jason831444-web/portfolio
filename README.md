@@ -13,6 +13,7 @@ Current featured projects include:
 - Smart Place Analytics — Facility Operations Analytics Platform
 - ApplyPilot — Deterministic Job-Fit Decision Support
 - DocuParse — AI-Assisted Document Workflow
+- CNN, ViT, and SNN Image Classification Research — Computer Vision and Neuromorphic Learning Research
 - SAM Academic Management System — Team Academic Planning Platform
 
 ## Tech Stack
@@ -55,6 +56,8 @@ src/
 │   └── ProjectCard.tsx
 ├── data/
 │   └── projects.ts
+├── lib/
+│   └── project-media.ts
 └── types/
     └── project.ts
 ```
@@ -96,7 +99,7 @@ To add a new project, add a new object to the `projects` array with the followin
   subtitle: "Short project category",
   description: "Short card description",
   longDescription: "Detailed project description",
-  image: "/images/project/thumbnail.png",
+  image: "/images/project/thumbnail.png", // optional
   techStack: ["Next.js", "TypeScript"],
   features: ["Feature 1", "Feature 2"],
   githubUrl: "",
@@ -104,7 +107,7 @@ To add a new project, add a new object to the `projects` array with the followin
 }
 ```
 
-Images should be placed under the `public` directory:
+Images are optional. If a project has a valid image path, place it under the `public` directory:
 
 ```txt
 public/
