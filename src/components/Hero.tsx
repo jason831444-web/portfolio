@@ -31,6 +31,11 @@ export default function Hero() {
           workflows.
         </p>
 
+        <p className="mt-4 text-base leading-7 text-zinc-600">
+          I also explore computer vision and neuromorphic learning through CNN,
+          Vision Transformer, and Spiking Neural Network experiments.
+        </p>
+
         <div className="mt-6 flex flex-wrap gap-2">
           {techHighlights.map((tech) => (
             <span

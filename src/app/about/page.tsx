@@ -4,22 +4,73 @@ export const metadata = {
     "About Jaeseong Yoon, a Computer Science student focused on product-minded full-stack systems with AI, OCR, and computer vision integrations.",
 };
 
-const skills = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "FastAPI",
-  "Python",
-  "PostgreSQL",
-  "SQLAlchemy",
-  "Docker",
-  "MQTT",
-  "Recharts",
-  "OpenCV",
-  "YOLO/Ultralytics",
-  "Tesseract OCR",
-  "PyMuPDF",
-  "pytest",
+const skillGroups = [
+  {
+    title: "Frontend",
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
+  },
+  {
+    title: "Backend",
+    skills: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "Pydantic",
+      "REST APIs",
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+    ],
+  },
+  {
+    title: "Databases",
+    skills: ["PostgreSQL", "MySQL", "Alembic", "JPA"],
+  },
+  {
+    title: "AI / ML / Computer Vision",
+    skills: [
+      "NumPy",
+      "PyTorch",
+      "OpenCV",
+      "YOLO/Ultralytics",
+      "CNNs",
+      "Vision Transformers",
+      "Spiking Neural Networks",
+    ],
+  },
+  {
+    title: "OCR / Document Processing",
+    skills: [
+      "Tesseract OCR",
+      "PyMuPDF",
+      "pypdf",
+      "python-docx",
+      "openpyxl",
+      "llama.cpp/GGUF",
+    ],
+  },
+  {
+    title: "Telemetry / Data",
+    skills: [
+      "MQTT",
+      "Mosquitto",
+      "telemetry ingestion",
+      "time-series visualization",
+    ],
+  },
+  {
+    title: "Infrastructure / Testing",
+    skills: [
+      "Docker",
+      "Docker Compose",
+      "GitHub Actions",
+      "Git",
+      "Linux",
+      "Vercel",
+      "Render",
+      "pytest",
+    ],
+  },
 ];
 
 const experiences = [
@@ -68,18 +119,28 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="mt-16 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="mt-16 grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
         <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-zinc-950">Core Skills</h2>
 
-          <div className="mt-5 flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-700"
-              >
-                {skill}
-              </span>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+            {skillGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">
+                  {group.title}
+                </h3>
+
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-700"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -103,6 +164,12 @@ export default function AboutPage() {
             <p>
               Portfolio projects grounded in FastAPI, Next.js, PostgreSQL,
               Docker, tests, and honest AI/CV/OCR integration boundaries.
+            </p>
+
+            <p>
+              Research experience in image-classification model comparisons and
+              neuromorphic learning, including CNN, Vision Transformer, and
+              Spiking Neural Network experiments.
             </p>
           </div>
         </div>

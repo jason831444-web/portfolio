@@ -160,6 +160,52 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
+    slug: "vision-snn-research",
+    title: "CNN, ViT, and SNN Image Classification Research",
+    subtitle: "Computer Vision and Neuromorphic Learning Research",
+    description:
+      "Research-focused image-classification work comparing CNN/ResNet-style, Vision Transformer, and Spiking Neural Network concepts with a NumPy-based SNN simulator.",
+    longDescription:
+      "This research-focused project summarizes my computer vision and neuromorphic learning work. It compares deep learning architecture ideas for image classification, including CNN/ResNet-style models, Vision Transformer concepts, and Spiking Neural Network research. As part of my BCL Lab internship, I built and tested a 3-layer SNN simulator in NumPy and reviewed Spikeformer-style spiking transformer research.",
+    categories: ["Research", "Computer Vision", "Neuromorphic Learning"],
+    techStack: [
+      "Python",
+      "NumPy",
+      "PyTorch",
+      "CNNs",
+      "Vision Transformers",
+      "Spiking Neural Networks",
+    ],
+    features: [
+      "Compared CNN/ResNet-style, Vision Transformer, and SNN architecture concepts for image-classification research",
+      "Built and tested a 3-layer Spiking Neural Network simulator using NumPy",
+      "Reviewed neuromorphic deep learning literature, including Spikeformer-style spiking transformer architectures",
+      "Explored power-consumption analysis support for lightweight deep learning model simulation",
+    ],
+    problem:
+      "CNNs, Vision Transformers, and Spiking Neural Networks make different tradeoffs for image classification, but those tradeoffs are easier to understand through focused experiments and simulator work than through papers alone.",
+    solution:
+      "The project frames model comparison and SNN simulation as research work: implement a small NumPy-based SNN simulator, review related transformer-based spiking architectures, and evaluate architecture tradeoffs without claiming production deployment.",
+    role:
+      "I built and tested the 3-layer SNN simulator, extended simulator functionality for power-consumption analysis support, and reviewed neuromorphic learning papers during my BCL Lab research internship.",
+    impact:
+      "This project adds research context to my full-stack portfolio and shows AI/ML foundations in computer vision, neural architecture tradeoffs, and neuromorphic learning.",
+    architecture: {
+      frontend:
+        "No web frontend; this was research and simulation work rather than a product UI.",
+      backend:
+        "Python/NumPy research scripts and simulator logic for image-classification experiments and SNN behavior.",
+      database:
+        "No production database; experiment outputs and notes were used for research analysis.",
+      aiOrCv:
+        "CNN/ResNet-style, Vision Transformer, and Spiking Neural Network concepts for image-classification research.",
+      deployment:
+        "Local research workflow; this was not a deployed production product.",
+    },
+    githubUrl: "",
+    liveUrl: "",
+  },
+  {
     slug: "sam-system",
     title: "SAM Academic Management System",
     subtitle: "Team Academic Planning Platform",
