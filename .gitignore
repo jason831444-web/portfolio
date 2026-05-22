@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -12,13 +13,20 @@
 
 # testing
 /coverage
+coverage/
+htmlcov/
+playwright-report/
+test-results/
 
 # next.js
 /.next/
+.next/
 /out/
+out/
 
 # production
 /build
+dist/
 
 # misc
 .DS_Store
@@ -32,6 +40,29 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.env
+.env.local
+.env.*.local
+
+# Python/local artifacts
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Generated local data
+uploads/
+media/uploads/
+generated/
+tmp/
+
+# Model weights and binaries
+*.pt
+*.pth
+*.onnx
+*.gguf
+*.bin
 
 # vercel
 .vercel
