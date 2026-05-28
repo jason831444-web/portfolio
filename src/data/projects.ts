@@ -213,7 +213,6 @@ export const projects: Project[] = [
       "Academic planning and student administration system built with Spring Boot, React/Vite, JPA/MySQL, Google OAuth, and role-based workflows.",
     longDescription:
       "SAM is a team-built academic management platform for course exploration, degree planning, registration workflows, role-based dashboards, and student administration. The project uses a Spring Boot backend, React/Vite frontend, JPA/MySQL persistence, Google OAuth, and automated test tooling.",
-    image: "/images/sam-system/thumbnail.png",
     categories: ["Full-Stack", "Team Project", "Academic Planning"],
     techStack: [
       "Spring Boot",
