@@ -108,6 +108,56 @@ export const projects: Project[] = [
     liveUrl: "https://apply-pilot-tau.vercel.app/dashboard",
   },
   {
+    slug: "first-paycheck",
+    title: "FirstPaycheck",
+    subtitle: "First-Job Financial Planning Simulator",
+    description:
+      "Full-stack financial planning simulator for new grads and OPT/F-1 workers comparing take-home pay, rent affordability, city tradeoffs, saved budget plans, and practical first-job costs.",
+    longDescription:
+      "FirstPaycheck helps new grads and OPT/F-1 workers pressure-test a first U.S. job budget before committing to a lease, commute, or offer. It combines a Next.js simulator UI, FastAPI calculation APIs, PostgreSQL-backed saved plans, tax/city data files, Excel/CSV exports, what-if analysis, advisor insights, and practical planning tools.",
+    categories: ["Full-Stack", "Financial Planning", "Decision Support"],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Alembic",
+      "Docker",
+      "Recharts",
+      "ExcelJS",
+      "pytest",
+    ],
+    features: [
+      "Salary, tax, FICA exemption, 401k, health insurance, rent, and expense simulation for first-job budgeting",
+      "All-state tax estimate engine using JSON tax data for no-income-tax, flat-tax, progressive-tax, and effective-rate estimate states",
+      "City and location comparison workflows with rent, transportation cost, affordability score, savings rate, and tax assumption notes",
+      "Saved budget plans backed by PostgreSQL with restore, duplicate, delete, and full simulator-state preservation",
+      "Excel/CSV exports, what-if analysis, advisor insight cards, apartment affordability checks, and practical planning tools",
+    ],
+    problem:
+      "New grads and OPT/F-1 workers often compare jobs, rent, cities, transportation, taxes, and move-in costs with rough guesses even though those choices determine whether a first paycheck is actually livable.",
+    solution:
+      "FirstPaycheck centralizes salary, tax, expense, city, rent, and planning assumptions into one full-stack simulator with explainable estimates, saved scenarios, exports, and practical decision-support tools.",
+    role:
+      "I built the full-stack application, including the Next.js simulator and planning tools, FastAPI calculation endpoints, SQLAlchemy models, Alembic migrations, PostgreSQL saved-plan workflow, export utilities, Docker setup, and pytest tests.",
+    impact:
+      "This project demonstrates product-minded full-stack engineering around real user decisions, data-driven calculations, dashboard-style visualization, persistence, exports, testing, and clear financial-disclaimer boundaries.",
+    architecture: {
+      frontend:
+        "Next.js and TypeScript frontend for the simulator, modular budget sections, result dashboards, city comparisons, saved plans, affordability checks, export flows, and planning tools.",
+      backend:
+        "FastAPI backend with routes for simulation, city presets, location comparison, what-if scenarios, advisor insights, saved scenarios, and health checks.",
+      database:
+        "PostgreSQL database managed with SQLAlchemy and Alembic for saved budget scenarios and simulator-state restoration.",
+      deployment:
+        "Docker Compose local stack with separate frontend, backend, and PostgreSQL services; backend tests use pytest and representative tax/calculation/API cases.",
+    },
+    githubUrl: "https://github.com/jason831444-web/first-paycheck",
+    liveUrl: "",
+  },
+  {
     slug: "docuparse",
     title: "DocuParse",
     subtitle: "AI-Assisted Document Workflow",

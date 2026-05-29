@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 export const metadata = {
   title: "Projects | Jaeseong Yoon",
   description:
-    "Selected full-stack software projects by Jaeseong Yoon, including facility analytics, job-fit analysis, document/OCR workflows, and academic planning.",
+    "Selected full-stack software projects by Jaeseong Yoon, including facility analytics, job-fit analysis, financial planning, document/OCR workflows, and academic planning.",
 };
 
 export default function ProjectsPage() {

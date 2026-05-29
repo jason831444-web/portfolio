@@ -2,7 +2,7 @@
 
 Personal software engineering portfolio built with Next.js, TypeScript, and Tailwind CSS.
 
-This site showcases selected full-stack software projects with AI/CV/OCR integrations, including facility analytics, job-fit decision support, document processing, and academic planning work.
+This site showcases selected full-stack software projects with AI/CV/OCR integrations and practical workflow tools, including facility analytics, job-fit decision support, financial planning, document processing, and academic planning work.
 
 ## Overview
 
@@ -12,6 +12,7 @@ Current featured projects include:
 
 - Smart Place Analytics — Facility Operations Analytics Platform
 - ApplyPilot — Deterministic Job-Fit Decision Support
+- FirstPaycheck — First-Job Financial Planning Simulator
 - DocuParse — AI-Assisted Document Workflow
 - CNN, ViT, and SNN Image Classification Research — Computer Vision and Neuromorphic Learning Research
 - SAM Academic Management System — Team Academic Planning Platform
